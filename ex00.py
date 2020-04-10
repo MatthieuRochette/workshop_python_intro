@@ -10,6 +10,13 @@
 Print "Hello World !"
 
 #Hint: to execute the program, write "python3 ex00.py" in the command line.
+
+#Example(s):
+Input:
+/
+
+Output:
+Hello World !
 --------------------------------------------------------------------------------
 """
 

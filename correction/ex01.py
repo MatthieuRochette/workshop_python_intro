@@ -5,24 +5,14 @@
 ## ex01
 ##
 
-"""
-------------------------------- TO DO ------------------------------------------
-Create a function named "my_divide".
-It will take two arguments, and return the division of the first argument by the second one.
-If your function encounters an error, it will return 0.
---------------------------------------------------------------------------------
-"""
-
-#Write your code hereunder
 def my_divide(a, b):
     if b == 0:
         return 0
     return a / b
 
-#Tests
 if __name__ == "__main__":
     try:
-        calcs= {
+        calcs = {
             (52, 13): "4.000",
             (4, 98): "0.041",
             (-7, 64): "-0.109",

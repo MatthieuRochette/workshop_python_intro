@@ -18,8 +18,35 @@ Bonus: count separately each vowel
 --------------------------------------------------------------------------------
 """
 
+#Do your imports hereunder
 def ex04():
-    #Write your code here
+    vowel_count = {
+        "a": 0,
+        "e": 0,
+        "i": 0,
+        "o": 0,
+        "u": 0,
+        "y": 0,
+        "Total": 0
+    }
+
+    with open("test.txt", "r") as file:
+        for line in file.readlines():
+            if "42" in line:
+                print(line, end="")
+            for i in line:
+                try:
+                    vowel_count[i] += 1
+                except KeyError:
+                    pass
+                except Exception:
+                    exit(84)
+    print()
+    for item in vowel_count.items():
+        if item[0] != "Total":
+            vowel_count["Total"] += item[1]
+    for key, value in vowel_count.items():
+        print("{}: {}".format(key, value))
 
 #Test
 if __name__ == "__main__":
