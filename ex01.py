@@ -9,7 +9,8 @@
 ------------------------------- TO DO ------------------------------------------
 Create the function "my_divide".
 
-It will take two parameters, and return the division of the first argument by the second one.
+It will take two parameters, and return the division of the first argument by
+the second one.
 If your function encounters an error, it will return 0.
 
 You should raise en exception in order to handle the division by zero !

@@ -30,19 +30,7 @@ Many are available: tkinter, Qt, SDL, SFML, ncurses...
 --------------------------------------------------------------------------------
 """
 
-#Do your imports hereunder
-
-
-def ():
-    #Write your program hereunder
-
 
 #Tests
 if __name__ == "__main__":
-    try:
-        ()
-    except Exception as excp:
-        print("Your program encountered an error.")
-        print("Error:", excp)
-        exit(84)
-    print("Congratulations ! You finished this exercise.")
+    #Write your main/tests here

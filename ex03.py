@@ -7,21 +7,23 @@
 
 """
 ------------------------------- TO DO ------------------------------------------
-Write a program which do the following things:
-- Ask to the user a number.
-- Ask to the user a second number.
-- Ask to the user an operation. ('+', '-', '*', '/', '%')
-- Finally, display the whole calcul.
+Write a program which does the following things:
+    - Ask the user for a number.
+    - Ask the user for a second number.
+    - Ask the user for an operation. ('+', '-', '*', '/', '%')
+    - Finally, display the whole calculation.
 
-Indeed, you should implement some error handling in your program. (division by zero, invalid parameter etc...)
+You should implement some error handling in your program. (division by zero,
+invalid parameter, etc...)
 
-You should try to make your code the must clean possible. (reusable functions)
+You should try to make your code the cleanest possible. (reusable functions, no
+useless variables, separate your code in multiple functions)
 
-You must implement raise execeptions in your program with the following messages:
-- "Invalid number(s)."
-- "Invalid operator."
-- "Division by zero."
-- "Modulo by zero."
+You must raise execeptions in your program with the following messages:
+    - "Invalid number(s)."
+    - "Invalid operator."
+    - "Division by zero."
+    - "Modulo by zero."
 
 #Hint: input(), raise Exception()
 
@@ -56,7 +58,6 @@ Division by zero.
 
 def my_calcul():
     #Write your program hereunder
-    pass
 
 if __name__ == "__main__":
     try:
