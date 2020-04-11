@@ -2,10 +2,10 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex04
+## ex05
 ##
 
-def ex04():
+def ex05():
     vowel_count = {
         "a": 0,
         "e": 0,
@@ -39,7 +39,7 @@ def ex04():
 
 if __name__ == "__main__":
     try:
-        ex04()
+        ex05()
     except Exception as excp:
         print("Your program encountered an error.")
         print("Error:", excp)

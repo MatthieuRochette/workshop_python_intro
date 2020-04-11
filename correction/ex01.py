@@ -6,9 +6,10 @@
 ##
 
 def my_divide(a, b):
-    if b == 0:
-        raise Exception("Division by zero.")
-    return a / b
+    try:
+        return a / b
+    except ZeroDivisionError: # return 0 if python raises ZeroDivisionError
+        return 0
 
 if __name__ == "__main__":
     try:

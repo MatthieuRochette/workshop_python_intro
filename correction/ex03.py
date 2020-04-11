@@ -1,15 +1,15 @@
-#!/usr/bin/env python3
+##
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex05
+## ex03
 ##
 
 from sys import argv as av
 
-def ex05():
-    for arg in av[1:]:
-        for i in arg:
+def ex03():
+    for arg in av[1:]: # for each argument (excepted the first)
+        for i in arg: # for each letter in the argument
             if i == "z" or i == "Z":
                 print(chr(ord(i) - 25), end="")
             elif i.isalpha():
@@ -20,7 +20,7 @@ def ex05():
 
 if __name__ == "__main__":
     try:
-        ex05()
+        ex03()
     except Exception as excp:
         print("Your program encountered an error.")
         print("Error:", excp)
