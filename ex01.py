@@ -7,11 +7,14 @@
 
 """
 ------------------------------- TO DO ------------------------------------------
-Create a function named "my_divide".
-It will take two arguments, and return the division of the first argument by the second one.
+Create the function "my_divide".
+
+It will take two parameters, and return the division of the first argument by the second one.
 If your function encounters an error, it will return 0.
 
-#Hint: Make use of the exceptions to handle division by zero !
+You should raise en exception in order to handle the division by zero !
+
+#Hint: Spend some time in order to understand the main provided !
 --------------------------------------------------------------------------------
 """
 

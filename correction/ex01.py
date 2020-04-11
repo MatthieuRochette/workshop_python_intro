@@ -7,7 +7,7 @@
 
 def my_divide(a, b):
     if b == 0:
-        return 0
+        raise Exception("Division by zero.")
     return a / b
 
 if __name__ == "__main__":

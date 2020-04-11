@@ -7,15 +7,15 @@
 
 """
 ------------------------------- TO DO ------------------------------------------
-Print "Hello World !"
+Let the fun begin ! print "Hello World !"
 
-#Hint: to execute the program, write "python3 ex00.py" in the command line.
+#Hint:
+In order to execute your program you should do the command below in your terminal:
 
-#Example(s):
-Input:
-/
+python3 ex00.py
 
-Output:
+#Output:
+
 Hello World !
 --------------------------------------------------------------------------------
 """
