@@ -1,26 +1,45 @@
-#!/usr/bin/env python3
+##
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex05
+## ex04
 ##
 
-from sys import argv as av
+def ex04():
+    vowel_count = {
+        "a": 0,
+        "e": 0,
+        "i": 0,
+        "o": 0,
+        "u": 0,
+        "y": 0,
+        "Total": 0
+    }
 
-def ex05():
-    for arg in av[1:]:
-        for i in arg:
-            if i == "z" or i == "Z":
-                print(chr(ord(i) - 25), end="")
-            elif i.isalpha():
-                print(chr(ord(i) + 1), end="")
-            else:
-                print(i, end="")
-        print()
+    #This is a good way to open a file.
+    with open("test.txt", "r") as file:
+        #for each line of a file...
+        for line in file.readlines():
+            if "42" in line:
+                print(line, end="")
+            #for each character of a line...
+            for i in line:
+                try:
+                    vowel_count[i] += 1
+                except KeyError:
+                    pass
+                except Exception:
+                    exit(84)
+    print()
+    for item in vowel_count.items():
+        if item[0] != "Total":
+            vowel_count["Total"] += item[1]
+    for key, value in vowel_count.items():
+        print("{}: {}".format(key, value))
 
 if __name__ == "__main__":
     try:
-        ex05()
+        ex04()
     except Exception as excp:
         print("Your program encountered an error.")
         print("Error:", excp)

@@ -2,65 +2,33 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex03
+## ex05
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
-Write a program which does the following things:
-    - Ask the user for a number.
-    - Ask the user for a second number.
-    - Ask the user for an operation. ('+', '-', '*', '/', '%')
-    - Finally, display the whole calculation.
+Write a program that takes a string (with input()) and prints it, but changes
+every letter for the next one in the alphabet.
+If you encounter the letter 'z', your program must give out an 'a'.
 
-You should implement some error handling in your program. (division by zero,
-invalid parameter, etc...)
+!!! Your program must be case-sensitive !!!
 
-You should try to make your code the cleanest possible. (reusable functions, no
-useless variables, separate your code in multiple functions)
-
-You must raise execeptions in your program with the following messages:
-    - "Invalid number(s)."
-    - "Invalid operator."
-    - "Division by zero."
-    - "Modulo by zero."
-
-#Hint: input(), raise Exception()
-
-#Exemple 1: Valid arguments
-
-number a:10
-number b:20
-operation:+
-10 + 20 = 30
-
-#Exemple 2: Invalid number
-
-number a:a
-Invalid number(s).
-
-#Exemple 3: Invalid operator
-
-number a:10
-number b:20
-operation:toto
-Invalid operator.
-
-#Exemple 4: Division by zero
-
-number a:10
-number b:0
-operation:/
-Division by zero.
-
+#Hint: take a look at functions ord() and chr()
 --------------------------------------------------------------------------------
 """
 
-def my_calcul():
-    #Write your program hereunder
+#Do your imports here
 
+
+def ex05():
+    #Write your code here
+
+#Test
 if __name__ == "__main__":
     try:
-        my_calcul()
-    except Exception as e:
-        print(e)
+        ex05()
+    except Exception as excp:
+        print("Your program encountered an error.")
+        print("Error:", excp)
+        exit(84)
+    print("Congratulations ! You finished this exercise.")

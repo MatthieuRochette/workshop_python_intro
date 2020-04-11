@@ -2,31 +2,29 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex05
+## ex04
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
-Write a program that takes a string (with input()) and prints it, but changes
-every letter for the next one in the alphabet.
-If you encounter the letter 'z', your program must give out an 'a'.
+Write a program that:
+    - opens a file (test.txt, at the root of the repository),
+    - counts the number of vowels in the file (list of vowels: "aeiouy")
+    - prints every line containing "42"
 
-!!! Your program must be case-sensitive !!!
+Hint: Take a look at the keyword 'with' !
 
-#Hint: take a look at functions ord() and chr()
+Bonus: count separately each vowel
 --------------------------------------------------------------------------------
 """
 
-#Do your imports here
-
-
-def ex05():
+def ex04():
     #Write your code here
 
 #Test
 if __name__ == "__main__":
     try:
-        ex05()
+        ex04()
     except Exception as excp:
         print("Your program encountered an error.")
         print("Error:", excp)
