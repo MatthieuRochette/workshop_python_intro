@@ -13,7 +13,7 @@ It will take two parameters, and return the division of the first argument by
 the second one.
 If your function encounters an error, it will return 0.
 
-You should raise en exception in order to handle the division by zero !
+You should manage exceptions in order to handle the division by zero !
 
 #Hint: Spend some time in order to understand the main provided !
 --------------------------------------------------------------------------------

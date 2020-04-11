@@ -8,37 +8,37 @@
 """
 ------------------------------- TO DO ------------------------------------------
 
-The goal of this exercice is to make the followings classes:
+The goal of this exercice is to make the following classes:
 
-- Weapon (an absctract class)
-- Sword (inheriting from Weapon)
-- Bow (inheriting from Weapon)
+- Weapon (designates a generic weapon)
+- Sword (specific weapon)
+- Bow (specific weapon)
 
 The class Weapon should respect the following things:
-- Name's class property should be "Weapon"
-- A constructor with 2 parameters: name and damage.
-- The attributes name, damage and range.
-- range attribute should be set to "Melee".
-- A classmethod "getClassName" which return the name's class.
-- A method "attack" which return damage's attribute.
-- A method "isMelee" which return a boolean.
-- A method "isRange" which return a boolean.
+    - Have a name class attribute, "Weapon"
+    - A constructor with 2 parameters: weapon's name and damage.
+    - The instance attributes name, damage and range.
+    - range attribute should be set to "Melee".
+    - A classmethod "getClassName" which returns the class' name.
+    - A method "attack" which returns the damage attribute.
+    - A method "isMelee" which returns a boolean.
+    - A method "isRange" which returns a boolean.
 
 The class Sword should respect the following things:
-- Name's class property should be "Sword"
-- Inherit from Weapon.
-- A method "slash" which return damage's attribute * 2 !
+    - Inherit from Weapon.
+    - Class' name attribute should be "Sword"
+    - A method "slash" which returns damage attribute times 2 !
 
 The class Bow should respect the following things:
-- Name's class property should be "Bow"
-- Inherit from Weapon.
-- range's attribute should be "Range".
-- A method "shoot" which return damage's attribute * 1.5 !
+    - Inherit from Weapon.
+    - Class' name attribute should be "Bow"
+    - range attribute should be "Range".
+    - A method "shoot" which returns damage attribute times 1.5 !
 
-#Hints:
-- Spend some time in order to understand the main provided !
-- Google is your best friend.
-- @classmethod
+Hints:
+    - Spend some time in order to understand the main provided !
+    - Google is your best friend.
+    - @classmethod
 
 --------------------------------------------------------------------------------
 """

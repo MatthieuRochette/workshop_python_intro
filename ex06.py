@@ -10,12 +10,15 @@
 
 Let's create a class Warrior !
 
-In his constructor, you must provide a name, health points and a weapon name.
+In its constructor, you must provide a name, health points and a weapon name.
 
-a Warrior can introduce himself with the method "Talk" or when you print him.
+A Warrior can introduce itself with the method "talk" or when you print it.
 
 --------------------------------------------------------------------------------
 """
+
+#Code here
+
 
 if __name__ == "__main__":
     try:
