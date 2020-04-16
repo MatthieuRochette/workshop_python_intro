@@ -2,31 +2,37 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex03
+## ex02
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
-Write a program that takes a string (with input()) and prints it, but changes
-every letter for the next one in the alphabet.
-If you encounter the letter 'z', your program must give out an 'a'.
 
-!!! Your program must be case-sensitive !!!
+Write a program that prints the arguments given in the command line, separated
+by a space, including the name of the Python file.
 
-#Hint: take a look at functions ord() and chr()
+It shall print a new line when all the arguments have been printed.
+
+!!! There should not be spaces before the first of after the last argument !!!
+
+!!! You must not print the arguments as a list (there musn't be square braces
+in the output unless they are given as arguments) !!!
+
+Hint: import sys
+
+Bonus : Try to do it in only one line of code !
 --------------------------------------------------------------------------------
 """
 
-#Do your imports here
+#Do your imports hereunder
 
+def print_args():
+    #Write your program hereunder
 
-def ex05():
-    #Write your code here
-
-#Test
+#Tests
 if __name__ == "__main__":
     try:
-        ex05()
+        print_args()
     except Exception as excp:
         print("Your program encountered an error.")
         print("Error:", excp)

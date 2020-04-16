@@ -2,59 +2,71 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex07
+## ex06
 ##
 
-class Weapon():
-    name = "Weapon"
-    def __init__(self, name, damage):
-        self.name = name
-        self.damage = damage
-        self.range = "Melee"
+import random
 
-    @classmethod
-    def getClassName(cls):
-        return cls.__name__
+move_quotes = [
+    "The might of Lokfar approaches !",
+    "To plunder !",
+    "To action !",
+    "I'm going.",
+    "Urge to kill, rising !"
+]
+
+taunt_quote = "C'mon, I won't hurt you. I promise !"
+
+joke_quote = "The worth of a man can be measured by the length of his beard, and the girth of his belt buckle."
+
+attack_quotes = [
+    "Faster to battle !",
+    "Chop chop !",
+    "My axe is thirsty.",
+    "Finally, some fun !",
+    "Death by steel !",
+    "Obliteration !"
+]
+
+class Warrior():
+    def __init__(self, name, weapon):
+        self.name = name
+        self.weapon = weapon
+        print("{}: Leave nothing behind !".format(self.name))
+
+    def __del__(self):
+        print("{}: I'm going.".format(self.name))
+
+    def __repr__(self):
+        return "{}: I've got my {}".format(self.name, self.weapon)
+
+    def talk(self):
+        print("{}: I've got my {}".format(self.name, self.weapon))
+
+    def move(self):
+        print("{}: {}".format(self.name, move_quotes[random.randrange(0, len(move_quotes))]))
+
+    def taunt(self):
+        print("{}: {}".format(self.name, taunt_quote))
+
+    def joke(self):
+        print("{}: {}".format(self.name, joke_quote))
 
     def attack(self):
-        return self.damage
+        print("{}: {}".format(self.name, attack_quotes[random.randrange(0, len(attack_quotes))]))
 
-    def isMelee(self):
-        return self.range == "Melee"
-
-    def isRange(self):
-        return self.range == "Range"
-
-class Sword(Weapon):
-    name = "Sword"
-    def __init__(self, name, damage):
-        Weapon.__init__(self, name, damage)
-
-    def slash(self):
-        return self.damage * 2
-
-class Bow(Weapon):
-    name = "Bow"
-    def __init__(self, name, damage):
-        Weapon.__init__(self, name, damage)
-        self.range = "Range"
-
-    def shoot(self):
-        return self.damage * 1.5
-
-if __name__ == "__main__":  
+if __name__ == "__main__":
     try:
-        weapon = Weapon("weapon", 42)
-        sword = Sword("sword", 42)
-        bow = Bow("bow", 42)
-        if weapon.getClassName() != "Weapon" or sword.getClassName() != "Sword" or bow.getClassName() != "Bow":
-            raise Exception("Invalid getCLassName method(s).")
-        elif weapon.isMelee() != True or sword.isMelee() != True or bow.isMelee() != False:
-            raise Exception("Invalid isMelee method(s).")
-        elif weapon.isRange() != False or sword.isRange() != False or bow.isRange() != True:
-            raise Exception("Invalid isRange method(s).")
-        elif weapon.attack() != 42 or sword.slash() != 42 * 2 or bow.shoot() != 42 * 1.5:
-            raise Exception("Invalid attack method(s)")
+        olaf = Warrior("Olaf", "Axe")
+        olaf.talk()
+        print(olaf)
+        olaf.joke()
+        olaf.taunt()
+        olaf.move()
+        olaf.move()
+        olaf.attack()
+        olaf.attack()
+        del olaf
     except Exception as e:
         print("Your program encountered an error.")
         print("Error:", e)

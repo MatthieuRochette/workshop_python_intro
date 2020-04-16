@@ -2,32 +2,27 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex01
+## ex00b
 ##
 
-def my_divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError: # return 0 if python raises ZeroDivisionError
-        return 0
+def my_swap(a, b):
+    a, b = b, a # Nice spec of python to swap two variables/values
+    return (a, b)
 
 if __name__ == "__main__":
+    v1s = [5, 45, 2, 0, "aerd", 0.34]
+    v2s = [6, 'bhkl', 524, 0.2, 45, 2]
     try:
-        calcs = {
-            (52, 13): "4.000",
-            (4, 98): "0.041",
-            (-7, 64): "-0.109",
-            (-84, -13): "6.462",
-            (0, 15): "0.000",
-            (15, 0): "0.000"
-        }
-        for pair, answer in calcs.items():
-            result = "{0:.3f}".format(my_divide(*pair))
-            if result != answer:
-                raise Exception("bruh")
-            print("{0} / {1} = {2}".format(pair, pair, result))
+        for i in range(len(v1s)):
+            v1, v2 = v1s[i], v2s[i]
+            print("Before swap: ", end="")
+            print("a={}, b={}".format(v1, v2))
+            v1, v2 = my_swap(v1, v2)
+            print("After swap: ", end="")
+            print("a={}, b={}".format(v1, v2))
+            if i < len(v1s):
+                print()
     except Exception as excp:
-        print("The program ran into an error at this pair of numbers: {}".format(pair))
         print("Error:", excp)
         exit(84)
     print("Congratulations ! You finished this exercise.")

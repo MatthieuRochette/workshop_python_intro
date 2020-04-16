@@ -2,39 +2,44 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex02
+## ex01
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
+Create the function "my_divide".
 
-Write a program that prints the arguments given in the command line, separated
-by a space, including the name of the Python file.
+It will take two parameters, and return the division of the first argument by
+the second one.
+If your function encounters an error, it will return 0.
 
-It shall print a new line when all the arguments have been printed.
+You should manage exceptions in order to handle the division by zero !
 
-!!! There should not be spaces before the first of after the last argument !!!
-
-!!! You must not print the arguments as a list (there musn't be square braces
-in the output unless they are given as arguments) !!!
-
-Hint: import sys
-
-Bonus : Try to do it in only one line of code !
+#Hint: Spend some time in order to understand the main provided !
 --------------------------------------------------------------------------------
 """
 
-#Do your imports hereunder
+#Write your code hereunder
 
-def print_args():
-    #Write your program hereunder
 
 #Tests
 if __name__ == "__main__":
     try:
-        print_args()
+        calcs = {
+            (52, 13): "4.000",
+            (4, 98): "0.041",
+            (-7, 64): "-0.109",
+            (-84, -13): "6.462",
+            (0, 15): "0.000",
+            (15, 0): "0.000"
+        }
+        for pair, answer in calcs.items():
+            result = "{0:.3f}".format(my_divide(*pair))
+            if result != answer:
+                raise Exception("bruh")
+            print("{0} / {1} = {2}".format(pair, pair, result))
     except Exception as excp:
-        print("Your program encountered an error.")
+        print("The program ran into an error at this pair of numbers: {}".format(pair))
         print("Error:", excp)
         exit(84)
     print("Congratulations ! You finished this exercise.")

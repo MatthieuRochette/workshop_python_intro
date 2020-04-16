@@ -2,75 +2,31 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex06
+## ex05
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
+Write a program that:
+    - opens a file (test.txt, at the root of the repository),
+    - counts the number of vowels in the file (list of vowels: "aeiouy")
+    - prints every line containing "42"
 
-Let's create Olaf from League of Legends !
+Hint: Take a look at the keyword 'with' !
 
-We will implement some quotes from this website:
-https://leagueoflegends.fandom.com/wiki/Olaf/Quotes
-
-Olaf is a Warrior, let's create a class Warrior which respect the following things:
-
-- A constructor with two parameters: name and weapon.
-In the constructor, the warrior say "Leave nothing behind !".
-
-- The instance attributes name and weapon.
-
-- A destructor which display "I'm going.".
-
-- When you print a warrior or use the method "talk", it should print:
-"name": I've got my "weapon's name".
-
-- A static method "move" which print:
-"name": "random Olaf moving quotes"
-
-- A static method "taunt" which print:
-"name": "Olaf taunt quotes"
-
-- A static method "joke" which print:
-"name": "Olaf joke quote"
-
-- A static method "attack" which print:
-"name": "random Olaf attack quotes"
-
-#Hints: import random
-
-#Outputs example:
-Olaf: Leave nothing behind !
-Olaf: I've got my Axe
-Olaf: I've got my Axe
-Olaf: The worth of a man can be measured by the length of his beard, and the girth of his belt buckle.
-Olaf: C'mon, I won't hurt you. I promise !
-Olaf: Urge to kill, rising !
-Olaf: The might of Lokfar approaches !
-Olaf: My axe is thirsty.
-Olaf: Faster to battle !
-Olaf: I'm going.
-Congratulation !
-
+Bonus: count separately each vowel
 --------------------------------------------------------------------------------
 """
 
-#Code here
+def ex06():
+    #Write your code here
 
+#Test
 if __name__ == "__main__":
     try:
-        olaf = Warrior("Olaf", "Axe")
-        olaf.talk()
-        print(olaf)
-        olaf.joke()
-        olaf.taunt()
-        olaf.move()
-        olaf.move()
-        olaf.attack()
-        olaf.attack()
-        del olaf
-    except Exception as e:
+        ex06()
+    except Exception as excp:
         print("Your program encountered an error.")
-        print("Error:", e)
+        print("Error:", excp)
         exit(84)
-    print("Congratulation !")
+    print("Congratulations ! You finished this exercise.")

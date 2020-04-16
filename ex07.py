@@ -2,62 +2,73 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex07
+## ex06
 ##
 
 """
 ------------------------------- TO DO ------------------------------------------
 
-The goal of this exercice is to make the following classes:
+Let's create Olaf from League of Legends !
 
-- Weapon (designates a generic weapon)
-- Sword (specific weapon)
-- Bow (specific weapon)
+We will implement some quotes from this website:
+https://leagueoflegends.fandom.com/wiki/Olaf/Quotes
 
-The class Weapon should respect the following things:
-    - Have a name class attribute, "Weapon"
-    - A constructor with 2 parameters: weapon's name and damage.
-    - The instance attributes name, damage and range.
-    - range attribute should be set to "Melee".
-    - A classmethod "getClassName" which returns the class' name.
-    - A method "attack" which returns the damage attribute.
-    - A method "isMelee" which returns a boolean.
-    - A method "isRange" which returns a boolean.
+Olaf is a Warrior, let's create a class Warrior which respect the following things:
 
-The class Sword should respect the following things:
-    - Inherit from Weapon.
-    - Class' name attribute should be "Sword"
-    - A method "slash" which returns damage attribute times 2 !
+- A constructor with two parameters: name and weapon.
+In the constructor, the warrior say "Leave nothing behind !".
 
-The class Bow should respect the following things:
-    - Inherit from Weapon.
-    - Class' name attribute should be "Bow"
-    - range attribute should be "Range".
-    - A method "shoot" which returns damage attribute times 1.5 !
+- The instance attributes name and weapon.
 
-Hints:
-    - Spend some time in order to understand the main provided !
-    - Google is your best friend.
-    - @classmethod
+- A destructor which display "I'm going.".
+
+- When you print a warrior or use the method "talk", it should print:
+"name": I've got my "weapon's name".
+
+- A static method "move" which print:
+"name": "random Olaf moving quotes"
+
+- A static method "taunt" which print:
+"name": "Olaf taunt quotes"
+
+- A static method "joke" which print:
+"name": "Olaf joke quote"
+
+- A static method "attack" which print:
+"name": "random Olaf attack quotes"
+
+#Hints: import random
+
+#Outputs example:
+Olaf: Leave nothing behind !
+Olaf: I've got my Axe
+Olaf: I've got my Axe
+Olaf: The worth of a man can be measured by the length of his beard, and the girth of his belt buckle.
+Olaf: C'mon, I won't hurt you. I promise !
+Olaf: Urge to kill, rising !
+Olaf: The might of Lokfar approaches !
+Olaf: My axe is thirsty.
+Olaf: Faster to battle !
+Olaf: I'm going.
+Congratulation !
 
 --------------------------------------------------------------------------------
 """
 
-#Write your code hereunder
+#Code here
 
 if __name__ == "__main__":
     try:
-        weapon = Weapon("weapon", 42)
-        sword = Sword("sword", 42)
-        bow = Bow("bow", 42)
-        if weapon.getClassName() != "Weapon" or sword.getClassName() != "Sword" or bow.getClassName() != "Bow":
-            raise Exception("Invalid getCLassName method(s).")
-        elif weapon.isMelee() != True or sword.isMelee() != True or bow.isMelee() != False:
-            raise Exception("Invalid isMelee method(s).")
-        elif weapon.isRange() != False or sword.isRange() != False or bow.isRange() != True:
-            raise Exception("Invalid isRange method(s).")
-        elif weapon.attack() != 42 or sword.slash() != 42 * 2 or bow.shoot() != 42 * 1.5:
-            raise Exception("Invalid attack method(s)")
+        olaf = Warrior("Olaf", "Axe")
+        olaf.talk()
+        print(olaf)
+        olaf.joke()
+        olaf.taunt()
+        olaf.move()
+        olaf.move()
+        olaf.attack()
+        olaf.attack()
+        del olaf
     except Exception as e:
         print("Your program encountered an error.")
         print("Error:", e)
