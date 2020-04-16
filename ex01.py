@@ -2,7 +2,7 @@
 ## EPITECH PROJECT, 2020
 ## workshop_python_intro
 ## File description:
-## ex00b
+## ex01
 ##
 
 """
